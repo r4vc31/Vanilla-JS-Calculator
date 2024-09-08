@@ -75,7 +75,7 @@ operators.forEach((element) => {
       }
     }
 
-    if (result!== null && currentResult.innerHTML != result && operator) {
+    if (result !== null && currentResult.innerHTML != result && operator) {
       previousResult.innerHTML += currentResult.innerHTML;
       currentResult.innerHTML = "";
     }

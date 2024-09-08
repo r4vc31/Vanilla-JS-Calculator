@@ -1,79 +1,81 @@
 .calculator {
-    width: 30vw;
-    height: 80vh;
+  width: 30vw;
+  height: 80vh;
 }
 
 .screen {
-    height: 20%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    border-radius: 1rem 1rem 0 0;
-    padding: 1rem;
+  height: 20%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
 }
 
 .screen p {
-    color: white;
-    margin: 0;
-    height: 50%;
-    font-size: 4rem;
-    display: flex;
-    align-items: center;
+  color: white;
+  margin: 0;
+  height: 50%;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
 }
 
-.screen p:first-child{
-    color: gray;
-    font-size: 2rem;
+.screen p:first-child {
+  color: gray;
+  font-size: 2rem;
 }
 
 .keys {
-    height: 70%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .key {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
 }
 
-.key.cleaner, .key.eraser, .key.number {
-    font-size: 2rem;
-    background-color: gray;
+.key.cleaner,
+.key.eraser,
+.key.number {
+  font-size: 2rem;
+  background-color: gray;
 }
 
 .key.operator {
-    background-color: orange;
+  background-color: orange;
 }
 
 .key.cleaner {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .key.zero {
-    grid-column-start: 1;
-    grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .key:hover {
-    opacity: .8;
-    cursor: pointer;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
-    .calculator {
-        width: 80vw;
-        height: 80vh;
-    }
-    body{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .calculator {
+    width: 80vw;
+    height: 80vh;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
