@@ -64,3 +64,10 @@
     opacity: .8;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+    .calculator {
+        width: 60vw;
+        height: 80vh;
+    }
+}
