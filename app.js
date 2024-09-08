@@ -22,7 +22,6 @@ numbers.forEach((element) => {
 
 operators.forEach((element) => {
   element.addEventListener("click", () => {
-    console.log("Operator Click", element.innerHTML);
 
     if (!currentResult.innerHTML && !previousResult.innerHTML) {
       alert("First, insert a number");
@@ -64,25 +63,22 @@ operators.forEach((element) => {
         break;
     }
 
-    if (!operator && result===null) {
+    if (!operator && result === null) {
       alert("First, insert an operator");
       return;
     }
 
     if (!isCompleted && operator) {
       currentResult.innerHTML += operator;
-      if (result!==null) {
+      if (result !== null) {
         previousResult.innerHTML = "";
       }
     }
-    
-    if(currentResult.innerHTML != result){
-      previousResult.innerHTML += currentResult.innerHTML;
-    currentResult.innerHTML = "";
-    }
 
-    console.log(number1, operator, number2);
-    
+    if (result!== null && currentResult.innerHTML != result && operator) {
+      previousResult.innerHTML += currentResult.innerHTML;
+      currentResult.innerHTML = "";
+    }
   });
 });
 
@@ -105,9 +101,10 @@ cleaner.addEventListener("click", () => {
 equal.addEventListener("click", () => {
   if (isCompleted) {
     calculateResult();
-  }else if(previousResult.innerHTML){
+  } else if (previousResult.innerHTML) {
     result = eval(previousResult.innerHTML);
     currentResult.innerHTML = result;
+    resetInfo();
   }
 });
 
@@ -120,9 +117,7 @@ function resetInfo() {
 
 function calculateResult() {
   const operation = number1 + operator + number2;
-  console.log(operation);
   result = eval(operation);
   currentResult.innerHTML = result;
   resetInfo();
-  console.log(result);
 }
